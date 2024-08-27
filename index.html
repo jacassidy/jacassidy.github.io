@@ -3,10 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Java Code Example</title>
+    <style>
+        body {
+            background-color: #2e3440;
+            color: #d8dee9;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        pre {
+            background-color: #3b4252;
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        code {
+            font-size: 1.1em;
+            color: #88c0d0;
+            line-height: 1.5;
+            display: block;
+        }
+        
+        .copy-button {
+            background-color: #5e81ac;
+            border: none;
+            color: #d8dee9;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .copy-button:hover {
+            background-color: #81a1c1;
+        }
+        
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>This is a simple website hosted on GitHub Pages.</p>
+
+    <div>
+        <pre><code id="code">
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+        </code></pre>
+        <button class="copy-button" onclick="copyCode()">Copy Code</button>
+    </div>
+
+    <script>
+        function copyCode() {
+            var code = document.getElementById("code").textContent;
+            navigator.clipboard.writeText(code).then(function() {
+                alert("Code copied to clipboard!");
+            }, function() {
+                alert("Failed to copy code.");
+            });
+        }
+    </script>
+
 </body>
 </html>
+
