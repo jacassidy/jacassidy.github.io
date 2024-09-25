@@ -83,3 +83,19 @@ a:hover {
     font-size: 1.2em;
     text-decoration: none;
 }
+
+/* Copy Button */
+.copy-button {
+    background-color: #5e81ac;
+    border: none;
+    color: #d8dee9;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.copy-button:hover {
+    background-color: #81a1c1;
+}
