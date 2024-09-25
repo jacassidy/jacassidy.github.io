@@ -1,0 +1,58 @@
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Code Container */
+.code-container {
+    margin-bottom: 20px;
+}
+
+.code-block {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+
+/* Copy Button */
+.copy-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Links */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Code List */
+#code-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#code-list li {
+    margin: 5px 0;
+}
+
+#code-list li a {
+    font-size: 18px;
+}

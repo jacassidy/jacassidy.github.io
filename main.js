@@ -15,4 +15,6 @@ fetch('code-list.json')
     })
     .catch(error => {
         console.error('Error fetching code list:', error);
+        const codeList = document.getElementById('code-list');
+        codeList.textContent = 'Error loading code list.';
     });

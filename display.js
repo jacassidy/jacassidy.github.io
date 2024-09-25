@@ -8,21 +8,23 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('code-title').textContent = fileName;
 
         fetch(`code/${fileName}`)
-            .then(response => response.text())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not OK');
+                }
+                return response.text();
+            })
             .then(code => {
                 const codeContent = document.getElementById('code-content');
                 codeContent.textContent = code;
-
-                // Initialize syntax highlighting if you use any
-                // e.g., Prism.highlightAll();
 
                 // Copy button functionality
                 const copyButton = document.getElementById('copy-button');
                 copyButton.addEventListener('click', () => {
                     navigator.clipboard.writeText(code).then(() => {
-                        alert('Code copied to clipboard');
-                    }, err => {
-                        console.error('Failed to copy code:', err);
+                        alert('Code copied to clipboard!');
+                    }).catch(err => {
+                        console.error('Could not copy text: ', err);
                     });
                 });
             })
